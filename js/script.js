@@ -1,3 +1,16 @@
+/*for (var i = 0; i <= products.length; i++){
+var obj = products[i]
+console.log(obj.name, obj.price)
+}*/
+
+function sumPrices(cartArray) {
+  for(var i=0; i<cartArray.length; i++) {
+    console.log(cartArray[i].price);
+  }
+}
+      
+      
+
 var products = [
   {
     "name": "Reversible Plaid",
