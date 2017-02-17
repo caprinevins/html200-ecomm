@@ -4,9 +4,14 @@ console.log(obj.name, obj.price)
 }*/
 
 function sumPrices(cartArray) {
+  var total = 0;
   for(var i=0; i<cartArray.length; i++) {
-    console.log(cartArray[i].price);
+    if(cartArray[i].price){
+      total = total + cartArray[i].price;
+    }
   }
+  //to do: print total as HTML to page
+  console.log(total);
 }
       
       
