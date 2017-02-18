@@ -3,6 +3,8 @@ var obj = products[i]
 console.log(obj.name, obj.price)
 }*/
 
+
+//to-do: trigger this function anytime something is added/change to the cart//
 function sumPrices(cartArray) {
   var total = 0;
   for(var i=0; i<cartArray.length; i++) {
