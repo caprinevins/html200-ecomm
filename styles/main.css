@@ -10,14 +10,21 @@
   background-color: aqua;
 }
 
+.item {
+  flex-direction: row;
+}
 .item-container {
   display: flex;
   background-color: salmon;
   padding: 2.5%;
 }
 
+.item-name {
+  color: antiquewhite;
+}
+
 section {
-  background-color: cornflowerblue;
+  background-color: salmon;
   border: 1.5%;
   padding: .5%;
 }
@@ -48,7 +55,3 @@ h3 {
   font-family: sans-serif;
 }
 
-.item-name {
-  padding: .5rem;
-  color: antiquewhite;
-}
