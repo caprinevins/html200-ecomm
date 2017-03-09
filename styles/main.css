@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+section {
+  height: 25em;
+  overflow: hidden;
+    background-color: salmon;
+  border: 1.5%;
+  padding: 5%;
+  text-align: center;
+}
+
 .stack-3 {
   width: 33.33%;
   float:left;
@@ -32,6 +41,7 @@
   display:table;
 }
 
+
 header {
   clear:both;
   display:inline;
@@ -56,11 +66,13 @@ nav ul{
 
 .item {
   flex-direction: row;
+}
+
+.hidden {
   display:none;
 }
 
 .item-container {
-  display: flex;
   background-color: salmon;
   padding: 5%;
 }
@@ -69,11 +81,6 @@ nav ul{
   color: antiquewhite;
 }
 
-section {
-  background-color: salmon;
-  border: 1.5%;
-  padding: 5%;
-}
 
 body {
   font-family:fantasy;
@@ -93,8 +100,8 @@ h3 {
   font-size 1.2em;
 }
 
-.item-image {
-  max-width: 100%;
+.js-item-image {
+  width: 30%;
 }
 
 .item-price {
@@ -102,12 +109,34 @@ h3 {
 }
 
 img {
-  width: 1005;
+  width: 100%;
   height: auto;
 }
 
 @media only screen and (max-width: 1020px) {
   [class*="stack-"] {
-  width:100%;
+  width:50%;    
   }
+  section {
+  height: 15em;
+  overflow: hidden;
+  background-color: salmon;
+  border: 1.5%;
+  padding: 5%;
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 500px) {
+  [class*="stack-"] {
+  width:100%;    
+  }
+  section {
+  height: 15em;
+  overflow: hidden;
+  background-color: salmon;
+  border: 1.5%;
+  padding: 5%;
+  text-align: center;
+}
 }

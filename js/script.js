@@ -14,11 +14,11 @@ function sumPrices(cartArray) {
   }
   //to do: print total as HTML to page
   console.log(total);*/
-}
+
       
 
 
-var blueprint = document.querySelector(".item");
+var blueprint = document.querySelector(".blueprint");
 
 
 
@@ -72,3 +72,40 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
+
+
+
+for(i=0; i < products.length; i++) {
+  
+  var itemCard = blueprint.cloneNode(true);
+
+  var nameHolder = itemCard.querySelector(".js-item-name");
+
+  nameHolder.innerText = products[i].name;
+  
+  var priceHolder = itemCard.querySelector(".js-item-price");
+  
+  priceHolder.innerText = products[i].price;
+  
+  var descriptionHolder = itemCard.querySelector(".js-item-description");
+  
+  descriptionHolder.innerText = products[i].description;
+  
+  var imageHolder = itemCard.querySelector(".js-item-image");
+  
+  imageHolder.setAttribute("src", 'images/' + products[i].imageTitle);
+    
+  var itemCardHolder = document.querySelector(".container");
+  
+  itemCardHolder.appendChild(itemCard);
+  
+  
+  
+}
+
+
+
+
+
+
+
