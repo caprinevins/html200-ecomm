@@ -1,7 +1,7 @@
 /*for (var i = 0; i <= products.length; i++){
 var obj = products[i]
 console.log(obj.name, obj.price)
-}*/
+}
 
 
 //to-do: trigger this function anytime something is added/change to the cart//
@@ -13,10 +13,14 @@ function sumPrices(cartArray) {
     }
   }
   //to do: print total as HTML to page
-  console.log(total);
+  console.log(total);*/
 }
       
-      
+
+
+var blueprint = document.querySelector(".item");
+
+
 
 var products = [
   {
