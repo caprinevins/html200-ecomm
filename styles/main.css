@@ -93,7 +93,7 @@ h1 {
 }
 
 h2 {
-  font-size 1.4em;
+  font-size 2.75em;
 }
 
 h3 {
@@ -104,6 +104,9 @@ h3 {
   width: 30%;
 }
 
+.js-item-name {
+  font-size: 2.75em;
+}
 .item-price {
   font-family: sans-serif;
 }
