@@ -1,50 +1,94 @@
-* {
-  box-sizing: border-box;
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
 }
 
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 600 PIXELS */
+
+@media only screen and (max-width: 600px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/*   SECTION will create NEW ROWS */
+
 section {
-  height: 25em;
-  overflow: hidden;
-    background-color: salmon;
+  height: 100%;
+  background-color: darkblue;
   border: 1.5%;
   padding: 5%;
   text-align: center;
+  color:snow;
 }
 
-.stack-3 {
-  width: 33.33%;
-  float:left;
-  padding:5px;
+/* PAGE SPECIFIC STYLING */
+
+body, html {
+    height: 100%;
 }
 
-.stack-title {
-  width: 70%;
-  float:left;
-  padding:5px;
+.parallax {
+    /* The image used */
+    background-image: image('winter.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.stack-menu {
-  width: 30%;
-  float:left;
-  padding:5px;
+.title {
+  font-size: 3em;
 }
 
-.stack-filter {
-  width: 25%;
-  float:left;
-  padding:5px;
+.nav {
+  background-color: aqua;
 }
 
-.row::after {
-  content: "";
-  clear:both;
-  display:table;
-}
-
-
-header {
-  clear:both;
-  display:inline;
+nav ul{
+  display: flex;
+  flex-direction: row;
+  color:crimson;
+  font-size: 2em;
 }
 
 li {
@@ -52,94 +96,40 @@ li {
   display:inline;
 }
 
-nav ul{
-/*  display: flex;
-  flex-direction: row;*/
-  font-family: fantasy;
-  color:crimson;
-  font-size: 150%;
+a {
+    font-family: 'Oswald', sans-serif;
 }
-
-.nav {
-  background-color: aqua;
-}
-
-.item {
-  flex-direction: row;
-}
-
-.hidden {
-  display:none;
-}
-
-.item-container {
-  background-color: salmon;
-  padding: 5%;
-}
-
-.item-name {
-  color: antiquewhite;
-}
-
 
 body {
-  font-family:fantasy;
   font-size: 100%;
-  padding: 2.5%
+  padding: .5%
 }
 
 h1 {
   font-size: 2.75em;
+  font-family: 'Oswald', sans-serif;
+  padding; 5px
 }
 
 h2 {
   font-size 2.75em;
+  font-family: 'Oswald', sans-serif;
+  padding: 5px
 }
 
 h3 {
   font-size 1.2em;
+  font-family: 'Oswald', sans-serif;
+  padding: 5px;
 }
 
-.js-item-image {
-  width: 30%;
-}
-
-.js-item-name {
-  font-size: 2.75em;
-}
-.item-price {
-  font-family: sans-serif;
+p {
+  font-family: 'Quattrocento Sans', sans-serif;
+  padding: 5px;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-}
-
-@media only screen and (max-width: 1020px) {
-  [class*="stack-"] {
-  width:50%;    
-  }
-  section {
-  height: 15em;
-  overflow: hidden;
-  background-color: salmon;
-  border: 1.5%;
-  padding: 5%;
-  text-align: center;
-}
-}
-
-@media only screen and (max-width: 500px) {
-  [class*="stack-"] {
-  width:100%;    
-  }
-  section {
-  height: 15em;
-  overflow: hidden;
-  background-color: salmon;
-  border: 1.5%;
-  padding: 5%;
-  text-align: center;
-}
+  padding: 5px;
 }
