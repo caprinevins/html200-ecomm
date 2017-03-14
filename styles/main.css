@@ -41,11 +41,26 @@
 /*  GO FULL WIDTH AT LESS THAN 600 PIXELS */
 
 @media only screen and (max-width: 600px) {
-	.col { margin: 1% 0 1% 0%;}
+	.col { margin: 1% 0 1% 0%; padding:1%;}
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+  
+    section {
+    height: 100%;
+    background-color: skyblue;
+    border: 1%;
+    padding: 1%;
+    text-align: left;
+    color:snow;
+  
+}
 }
 
 /*   SECTION will create NEW ROWS */
+
+.winterpic {
+  position: fixed;
+  background-image: 
+}
 
 section {
   height: 100%;
@@ -56,44 +71,61 @@ section {
   color:snow;
 }
 
+@media only screen and (min-width: 1200px) {
+  section {opacity:.5;}
+}
+
+section:hover {
+  opacity:1;
+}
+
 /* PAGE SPECIFIC STYLING */
+
+html {
+    background: url(\images\winter.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
+
+.scarfcat {
+  width: 50px;
+}
 
 body, html {
     height: 100%;
 }
 
-.parallax {
+/*.parallax {
     /* The image used */
-    background-image: image('winter.jpg');
+    background-image: url("images/winter.jpg");
 
     /* Full height */
-    height: 100%; 
+    height: 1000px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size:contain;
+}*/
 
 .title {
   font-size: 3em;
+  background-color: aqua;
 }
 
-.nav {
+nav {
   background-color: aqua;
 }
 
 nav ul{
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   color:crimson;
   font-size: 2em;
 }
 
 li {
   padding: 5px;
-  display:inline;
+  display:inline-block;
 }
 
 a {
